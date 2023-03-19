@@ -113,10 +113,22 @@ header {
     line-height: 35px;
 }
 
+.hero-section__title, .hero-section__caption {
+    position: relative;
+    animation-name: showUp;
+    animation-duration: 0.5s;
+}
+
 .hero-section__btn {
     background-color: #f6e224;
     width: 279px;
     transition: background-color 0.3s ease-out;
+    position: relative;
+    opacity: 0;
+    animation-name: slideLeft;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards
 }
 
 .hero-section__btn:hover {
@@ -124,5 +136,43 @@ header {
 }
 
 .hero-logo {
+    opacity: 0;
     padding-top: 50px;
+    animation-name: slideRight;
+    animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    animation-fill-mode: forwards
+}
+
+@keyframes showUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
