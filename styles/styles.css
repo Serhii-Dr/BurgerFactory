@@ -113,7 +113,8 @@ header {
     line-height: 35px;
 }
 
-.hero-section__title, .hero-section__caption {
+.hero-section__title,
+.hero-section__caption {
     position: relative;
     animation-name: showUp;
     animation-duration: 0.5s;
@@ -125,10 +126,7 @@ header {
     transition: background-color 0.3s ease-out;
     position: relative;
     opacity: 0;
-    animation-name: slideLeft;
-    animation-duration: 0.5s;
-    animation-delay: 0.3s;
-    animation-fill-mode: forwards
+    animation: slideLeft 0.5s 0.3s forwards;
 }
 
 .hero-section__btn:hover {
@@ -138,10 +136,68 @@ header {
 .hero-logo {
     opacity: 0;
     padding-top: 50px;
-    animation-name: slideRight;
-    animation-duration: 0.5s;
-    animation-delay: 0.3s;
-    animation-fill-mode: forwards
+    animation: slideRight 0.5s 0.3s forwards;
+}
+
+.ingredients_section__wrapper {
+    padding-top: 150px;
+    text-align: center;
+}
+
+.ingredients-section__title {
+    font-size: 64px;
+    line-height: 95px;
+    font-weight: 900;
+    color: #2A2A2A;
+}
+
+.ingredients-section__caption {
+    font-size: 24px;
+    line-height: 35px;
+    color: #2A2A2A;
+    font-weight: 700;
+    padding-top: 20px;
+    width: 55%;
+    margin: 0 auto;
+}
+
+.ingredients-section__slider {
+    display: flex;
+    padding-top: 50px;
+    
+}
+
+.slider__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 26px;
+    flex-basis: 242px;
+    height: 229px;
+    padding: 20px 0px;
+    margin-right: 50px;
+}
+
+.slider__item img {
+    display: block;
+    margin: 0 auto;
+}
+
+.slider-item__desc {
+    font-size: 18px;
+    color: #2A2A2A;
+    line-height: 27px;
+    font-weight: 700;
+}
+
+.ingredients-section__description {
+    font-size: 18px;
+    line-height: 27px;
+    color: #2A2A2A;
+    padding-top: 50px;
+    width: 65%;
+    margin: 0 auto;
 }
 
 @keyframes showUp {
@@ -149,6 +205,7 @@ header {
         opacity: 0;
         transform: translateY(-100px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -160,6 +217,7 @@ header {
         opacity: 0;
         transform: translateX(-100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
@@ -171,6 +229,7 @@ header {
         opacity: 0;
         transform: translateX(100px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
