@@ -141,7 +141,7 @@ header {
 .hero-logo {
     opacity: 0;
     padding-top: 50px;
-    animation: slideRight 0.5s 0.3s forwards;
+    animation: slideRight 0.5s forwards;
 }
 
 .ingredients-section,
@@ -155,6 +155,8 @@ header {
 
 .ingredients_section__wrapper {
     text-align: center;
+    position: relative;
+    opacity: 0;
 }
 
 .ingredients-section__title,
@@ -230,6 +232,7 @@ header {
 .about-section__wrapper {
     display: flex;
     justify-content: space-between;
+    opacity: 0;
 }
 
 
@@ -247,6 +250,10 @@ header {
 }
 
 /* Menu section */
+
+.menu-section__wrapper {
+    opacity: 0;
+}
 
 .menu-section__title {
     text-align: center;
@@ -297,6 +304,10 @@ header {
 }
 
 /* Location section styles */
+
+.location__wrapper {
+    opacity: 0;
+}
 
 .location-section__title {
     text-align: center;
@@ -371,6 +382,12 @@ footer {
 
 .footer__description p:first-child {
     font-weight: 700;
+}
+
+/* Exrta classes */
+
+.scrollAnimation {
+    animation: showUp 0.5s 0.3s forwards;
 }
 
 @keyframes showUp {
