@@ -31,12 +31,15 @@ img {
     height: 40px;
 }
 
+/* Header section styles */
+
 header {
     box-shadow: 0px 3px 6px #00000029;
     padding: 29px 0px;
 }
 
-.header__icon a {
+.header__icon a,
+.footer__icon a {
     display: block;
 }
 
@@ -82,6 +85,8 @@ header {
     background-color: #0098f7;
 }
 
+/* Hero section styles */
+
 .hero-section {
     background-image: url('../assets/Gradient.png');
     background-repeat: no-repeat;
@@ -99,7 +104,7 @@ header {
 }
 
 .hero-section__title {
-    font-size: 84px;
+    font-size: clamp(24px, 5vw, 84px);
     font-weight: 900;
     color: #2a2a2a;
     line-height: 125px;
@@ -139,23 +144,39 @@ header {
     animation: slideRight 0.5s 0.3s forwards;
 }
 
-.ingredients_section__wrapper {
+.ingredients-section,
+.about-section,
+.menu-section,
+.location-section {
     padding-top: 150px;
+}
+
+/* Ingredients section styles */
+
+.ingredients_section__wrapper {
     text-align: center;
 }
 
-.ingredients-section__title {
+.ingredients-section__title,
+.about-section__title,
+.menu-section__title,
+.location-section__title {
     font-size: 64px;
     line-height: 95px;
     font-weight: 900;
     color: #2A2A2A;
 }
 
-.ingredients-section__caption {
+.ingredients-section__caption,
+.about-section__caption {
     font-size: 24px;
     line-height: 35px;
     color: #2A2A2A;
     font-weight: 700;
+
+}
+
+.ingredients-section__caption {
     padding-top: 20px;
     width: 55%;
     margin: 0 auto;
@@ -164,7 +185,7 @@ header {
 .ingredients-section__slider {
     display: flex;
     padding-top: 50px;
-    
+
 }
 
 .slider__item {
@@ -191,13 +212,165 @@ header {
     font-weight: 700;
 }
 
-.ingredients-section__description {
+.ingredients-section__description,
+.about-section__description {
     font-size: 18px;
     line-height: 27px;
     color: #2A2A2A;
+}
+
+.ingredients-section__description {
     padding-top: 50px;
     width: 65%;
     margin: 0 auto;
+}
+
+/* About section styles */
+
+.about-section__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.about-section__left,
+.about-section__right {
+    flex-basis: 49%;
+}
+
+.about-section__title {
+    margin-bottom: 20px;
+}
+
+.about-section__caption {
+    margin-bottom: 50px;
+}
+
+/* Menu section */
+
+.menu-section__title {
+    text-align: center;
+}
+
+.menu-section__meals-wrapper {
+    margin: 50px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menu-section__meal-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 26px;
+    padding: 20px;
+    min-height: 440px;
+    flex-basis: 408px;
+}
+
+.meal-item__description {
+    font-size: 24px;
+    color: #2A2A2A;
+    line-height: 35px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.meal-item__img-wrapper {
+    text-align: center;
+}
+
+.meal-item__details {
+    font-size: 18px;
+    line-height: 27px;
+    color: #008BF6;
+    font-weight: 700;
+    text-align: right;
+}
+
+.menu-section__button {
+    background-color: #00B3FA;
+    width: 161px;
+    margin: 0 auto;
+}
+
+/* Location section styles */
+
+.location-section__title {
+    text-align: center;
+}
+
+.location-section__map {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.location-section__info-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0px;
+}
+
+.location-section__info-wrapper p {
+    font-size: 24px;
+    line-height: 35px;
+    color: #2A2A2A;
+}
+
+.location-section__info-wrapper p:first-child {
+    font-weight: 700;
+}
+
+.location-section__map__logo-wrapper {
+    position: relative;
+}
+
+.logo-wrapper__icon {
+    position: absolute;
+    top: 185px;
+    left: 340px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-wrapper__icon img {
+    display: block;
+}
+
+/* Footer styles */
+
+footer {
+    margin-top: 150px;
+    background-color: #F5F5F5;
+}
+
+.footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 29px 0px;
+}
+
+.footer__description {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__description p {
+    font-size: 14px;
+}
+
+.footer__description p:first-child {
+    font-weight: 700;
 }
 
 @keyframes showUp {
