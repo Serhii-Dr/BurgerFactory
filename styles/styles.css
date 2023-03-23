@@ -245,6 +245,7 @@ header {
 
 .about-section__wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     opacity: 0;
 }
@@ -277,7 +278,7 @@ header {
     margin: 50px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -286,7 +287,7 @@ header {
     border-radius: 26px;
     padding: 20px;
     min-height: 410px;
-    flex-basis: 408px;
+    width: 408px;
 }
 
 .meal-item__description {
@@ -326,6 +327,10 @@ header {
     cursor: pointer;
 }
 
+.meal-item__details:hover {
+    color: #0098F7;
+}
+
 .menu-section__button {
     background-color: #00B3FA;
     width: 161px;
@@ -354,6 +359,7 @@ header {
 
 .location-section__info-wrapper {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 30px 0px;
 }
@@ -372,10 +378,11 @@ header {
     position: relative;
 }
 
+
 .logo-wrapper__icon {
     position: absolute;
-    top: 185px;
-    left: 340px;
+    top: 40%;
+    left: 40%;
     width: 50px;
     height: 50px;
     background-color: #FFFFFF;
@@ -428,9 +435,6 @@ footer {
     display: none;
 }
 
-.menu-section__meal-item.active {
-    height: 700px;
-}
 
 @keyframes showUp {
     0% {
@@ -468,6 +472,8 @@ footer {
     }
 }
 
+/* Media queries */
+
 @media screen and (max-width: 1440px) {
     .header__nav {
         padding-left: 65px;
@@ -490,6 +496,26 @@ footer {
     .hero-section__about {
         margin-top: 100px;
     }
+
+    .ingredients-section__title,
+    .about-section__title,
+    .menu-section__title,
+    .location-section__title {
+        font-size: clamp(32px, 5vw, 64px);
+        line-height: clamp(80px, 5vw, 95px);
+    }
+
+    .about-section__wrapper {
+        flex-direction: column;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    .about-section__right {
+        text-align: center;
+        margin-top: 45px;
+    }
+
 }
 
 @media screen and (max-width: 1000px) {
@@ -519,5 +545,27 @@ footer {
     .hero-section__btn {
         font-size: 15px;
         width: 250px;
+    }
+
+    .hero-logo {
+        flex-basis: 45%;
+    }
+
+    .ingredients-section__caption,
+    .about-section__caption {
+        font-size: 20px;
+    }
+
+    .menu-section__meals-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-section__meal-item {
+        margin-top: 20px;
+    }
+    .location-section__info-wrapper {
+        flex-direction: column;
+        align-items: center;
     }
 }
