@@ -26,10 +26,10 @@
                     </div>
                     <nav class="header__nav">
                         <ul class="header__nav-list">
-                            <li class="navigation__item"><a href="#">INGREDIENT</a></li>
-                            <li class="navigation__item"><a href="#">STORY</a></li>
-                            <li class="navigation__item"><a href="#">BURGERS</a></li>
-                            <li class="navigation__item"><a href="#">LOCATION</a></li>
+                            <li class="navigation__item"><a href="#ingredienst">INGREDIENT</a></li>
+                            <li class="navigation__item"><a href="#about">STORY</a></li>
+                            <li class="navigation__item"><a href="#burgers">BURGERS</a></li>
+                            <li class="navigation__item"><a href="#location">LOCATION</a></li>
                         </ul>
                     </nav>
                     <button class="btn header__nav-btn">Order now</button>
@@ -43,7 +43,7 @@
                         <div class="hero-section__about">
                             <h1 class="hero-section__title">Burger Factory</h1>
                             <h3 class="hero-section__caption">Your dreamed burger close to your locations!</h3>
-                            <button class="btn hero-section__btn">Discover the ingredients</button>
+                            <div><a href="#ingredienst" class="hero-section__btn">Discover the ingredients</a></div>
                         </div>
                         <div class="hero-logo">
                             <img src="assets/Groupe 2.png" alt="hero-section-logo">
@@ -53,7 +53,7 @@
             </section>
             <section class="ingredients-section">
                 <div class="container">
-                    <div class="ingredients_section__wrapper appear">
+                    <div class="ingredients_section__wrapper appear" id="ingredienst">
                         <h1 class="ingredients-section__title">Ingredients</h1>
                         <h3 class="ingredients-section__caption">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit. Fusce mollis id arcu vel maximus.
@@ -92,7 +92,7 @@
             </section>
             <section class="about-section">
                 <div class="container">
-                    <div class="about-section__wrapper appear">
+                    <div class="about-section__wrapper appear" id="about">
                         <div class="about-section__left">
                             <h1 class="about-section__title">The story</h1>
                             <h3 class="about-section__caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -119,26 +119,53 @@
             </section>
             <section class="menu-section">
                 <div class="container">
-                    <div class="menu-section__wrapper appear">
+                    <div class="menu-section__wrapper appear" id="burgers">
                         <h1 class="menu-section__title">Burgers</h1>
                         <div class="menu-section__meals-wrapper">
                             <div class="menu-section__meal-item">
                                 <p class="meal-item__description">1/4 Pound Cheese</p>
-                                <div class="meal-item__img-wrapper"><img src="assets/Design-4.png" alt="burger-meal">
+                                <div class="meal-item__img-wrapper">
+                                    <img src="assets/Design-4.png" alt="burger-meal">
                                 </div>
-                                <p class="meal-item__details">Details</p>
+                                <div class="meal-item__ingredients-wrapper">
+                                    <div class="ingredienst-wrapper__list d-none">
+                                        <p class="ingredients-item__heading">Ingredient</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                    </div>
+                                    <p class="meal-item__details">Details</p>
+                                </div>
                             </div>
                             <div class="menu-section__meal-item">
                                 <p class="meal-item__description">Big Burger</p>
-                                <div class="meal-item__img-wrapper"><img src="assets/Design-4.png" alt="burger-meal">
+                                <div class="meal-item__img-wrapper">
+                                    <img src="assets/Design-4.png" alt="burger-meal">
                                 </div>
-                                <p class="meal-item__details">Details</p>
+                                <div class="meal-item__ingredients-wrapper">
+                                    <div class="ingredienst-wrapper__list d-none">
+                                        <p class="ingredients-item__heading">Ingredient</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                    </div>
+                                    <p class="meal-item__details">Details</p>
+                                </div>
                             </div>
                             <div class="menu-section__meal-item">
                                 <p class="meal-item__description">Pure Bacon</p>
-                                <div class="meal-item__img-wrapper"><img src="assets/Design-4.png" alt="burger-meal">
+                                <div class="meal-item__img-wrapper">
+                                    <img src="assets/Design-4.png" alt="burger-meal">
                                 </div>
-                                <p class="meal-item__details">Details</p>
+                                <div class="meal-item__ingredients-wrapper">
+                                    <div class="ingredienst-wrapper__list d-none">
+                                        <p class="ingredients-item__heading">Ingredient</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                        <p class="ingredienst-item__currentIngredient">Lorem ipsum</p>
+                                    </div>
+                                    <p class="meal-item__details">Details</p>
+                                </div>
                             </div>
                         </div>
                         <button class="btn menu-section__button">Order now</button>
@@ -147,7 +174,7 @@
             </section>
             <section class="location-section">
                 <div class="container">
-                    <div class="location__wrapper appear">
+                    <div class="location__wrapper appear" id="location">
                         <h1 class="location-section__title">Location</h1>
                         <div class="location-section__map">
                             <div class="location-section__info-wrapper">

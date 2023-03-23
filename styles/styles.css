@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
 }
@@ -12,6 +16,7 @@ body {
     max-width: 1352px;
     margin: 0 auto;
     padding: 0px 20px;
+    width: 90%;
 }
 
 img {
@@ -29,6 +34,7 @@ img {
     border: none;
     line-height: 27px;
     height: 40px;
+    cursor: pointer;
 }
 
 /* Header section styles */
@@ -126,12 +132,20 @@ header {
 }
 
 .hero-section__btn {
+    display: block;
     background-color: #f6e224;
     width: 279px;
     transition: background-color 0.3s ease-out;
     position: relative;
     opacity: 0;
     animation: slideLeft 0.5s 0.3s forwards;
+    cursor: pointer;
+    padding: 10px 27px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #2A2A2A;
+    font-weight: 700;
 }
 
 .hero-section__btn:hover {
@@ -263,17 +277,15 @@ header {
     margin: 50px 0px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; 
+    align-items: flex-start;
 }
 
 .menu-section__meal-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 26px;
     padding: 20px;
-    min-height: 440px;
+    min-height: 410px;
     flex-basis: 408px;
 }
 
@@ -287,6 +299,22 @@ header {
 
 .meal-item__img-wrapper {
     text-align: center;
+    margin-top: 60px;
+}
+
+.meal-item__ingredients-wrapper {
+    margin-top: 50px;
+}
+
+.ingredients-item__heading,
+.ingredienst-item__currentIngredient {
+    font-size: 14px;
+    line-height: 21px;
+    color: #2A2A2A;
+}
+
+.ingredients-item__heading {
+    font-weight: 700;
 }
 
 .meal-item__details {
@@ -295,12 +323,18 @@ header {
     color: #008BF6;
     font-weight: 700;
     text-align: right;
+    cursor: pointer;
 }
 
 .menu-section__button {
     background-color: #00B3FA;
     width: 161px;
     margin: 0 auto;
+    transition: background-color 0.3s ease-out;
+}
+
+.menu-section__button:hover {
+    background-color: #0098f7;
 }
 
 /* Location section styles */
@@ -390,6 +424,14 @@ footer {
     animation: showUp 0.5s 0.3s forwards;
 }
 
+.d-none {
+    display: none;
+}
+
+.menu-section__meal-item.active {
+    height: 700px;
+}
+
 @keyframes showUp {
     0% {
         opacity: 0;
@@ -423,5 +465,59 @@ footer {
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .header__nav {
+        padding-left: 65px;
+    }
+
+    .navigation__item:not(:last-child) {
+        margin-right: 35px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 98%;
+    }
+
+    .navigation__item a {
+        font-size: 16px;
+    }
+
+    .hero-section__about {
+        margin-top: 100px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .header__nav-btn,
+    .header__nav {
+        display: none;
+    }
+
+    .ingredients-section,
+    .about-section,
+    .menu-section,
+    .location-section {
+        padding-top: 120px;
+    }
+
+    .hero-section__title {
+        line-height: 60px;
+    }
+
+    .hero-section__caption {
+        font-size: 20px;
+        line-height: 30px;
+        margin: 15px 0px;
+    }
+
+    .hero-section__btn {
+        font-size: 15px;
+        width: 250px;
     }
 }
