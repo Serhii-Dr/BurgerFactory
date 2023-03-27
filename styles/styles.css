@@ -42,6 +42,7 @@ img {
 header {
     box-shadow: 0px 3px 6px #00000029;
     padding: 29px 0px;
+    position: relative;
 }
 
 .header__icon a,
@@ -71,7 +72,7 @@ header {
     margin-right: 0px;
 }
 
-.navigation__item a {
+.navigation__item a, .dropdown__item a {
     text-decoration: none;
     cursor: pointer;
     color: #2a2a2a;
@@ -89,6 +90,52 @@ header {
 
 .header__nav-btn:hover {
     background-color: #0098f7;
+}
+
+.burger-menu {
+    display: none;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px;
+}
+
+.burger-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: #97DEFF;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.burger-dropdown .header__nav-list {
+    flex-direction: column;
+    align-items: center;
+}
+
+.dropdown__item {
+    margin: 25px;
+}
+
+.close-item {
+    cursor: pointer;
+}
+
+.burger-dropdown.open {
+    height: 450px;
 }
 
 /* Hero section styles */
@@ -425,17 +472,6 @@ footer {
     font-weight: 700;
 }
 
-/* Exrta classes */
-
-.scrollAnimation {
-    animation: showUp 0.5s 0.3s forwards;
-}
-
-.d-none {
-    display: none;
-}
-
-
 @keyframes showUp {
     0% {
         opacity: 0;
@@ -525,6 +561,10 @@ footer {
         display: none;
     }
 
+    .burger-menu {
+        display: block;
+    }
+
     .ingredients-section,
     .about-section,
     .menu-section,
@@ -562,10 +602,22 @@ footer {
     }
 
     .menu-section__meal-item {
-        margin-top: 20px;
+        margin-top: 35px;
     }
+
     .location-section__info-wrapper {
         flex-direction: column;
         align-items: center;
     }
 }
+
+/* Exrta classes */
+
+.scrollAnimation {
+    animation: showUp 0.5s 0.3s forwards;
+}
+
+.d-none {
+    display: none;
+}
+
