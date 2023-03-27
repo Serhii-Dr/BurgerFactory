@@ -72,7 +72,8 @@ header {
     margin-right: 0px;
 }
 
-.navigation__item a, .dropdown__item a {
+.navigation__item a,
+.dropdown__item a {
     text-decoration: none;
     cursor: pointer;
     color: #2a2a2a;
@@ -103,6 +104,19 @@ header {
     height: 3px;
     background-color: black;
     margin: 5px;
+    transition: 0.4s;
+}
+
+.lines-animation .line-first {
+    transform: translate(0, 5px) rotate(-45deg);
+}
+
+.lines-animation .line-second {
+    opacity: 0;
+}
+
+.lines-animation .line-third {
+    transform: translate(0, -11px) rotate(45deg);
 }
 
 .burger-dropdown {
@@ -137,6 +151,7 @@ header {
 .burger-dropdown.open {
     height: 450px;
 }
+
 
 /* Hero section styles */
 
@@ -248,7 +263,8 @@ header {
 .ingredients-section__slider {
     display: flex;
     padding-top: 50px;
-
+    padding-bottom: 10px;
+    overflow-x: hidden;
 }
 
 .slider__item {
@@ -257,10 +273,14 @@ header {
     justify-content: space-between;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 26px;
-    flex-basis: 242px;
-    height: 229px;
+    width: 229px;
+    height: 242px;
     padding: 20px 0px;
     margin-right: 50px;
+}
+
+.slider__item:last-child {
+    margin-right: 0px;
 }
 
 .slider__item img {
@@ -611,6 +631,12 @@ footer {
     }
 }
 
+@media screen and (max-width: 768px) {
+    .burger-dropdown.open {
+        height: 350px;
+    }
+}
+
 /* Exrta classes */
 
 .scrollAnimation {
@@ -620,4 +646,3 @@ footer {
 .d-none {
     display: none;
 }
-

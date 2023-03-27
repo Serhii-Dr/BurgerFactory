@@ -6,6 +6,7 @@ const burgerBtn = document.querySelector('.burger-menu');
 const closeIcon = document.querySelector('.close-item');
 const dropdown = document.querySelector('.burger-dropdown');
 
+
 // Listeners
 
 window.addEventListener('scroll', function () {
@@ -28,7 +29,8 @@ items.forEach((item) => {
 });
 
 burgerBtn.addEventListener('click', function () {
-  dropdown.classList.toggle('open')
+  dropdown.classList.toggle('open');
+  this.classList.toggle('lines-animation')
 });
 
 closeIcon.addEventListener('click', function(){
