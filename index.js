@@ -35,4 +35,5 @@ burgerBtn.addEventListener('click', function () {
 
 closeIcon.addEventListener('click', function(){
   dropdown.classList.remove('open');
+  burgerBtn.classList.remove('lines-animation')
 })
